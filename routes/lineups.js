@@ -9,6 +9,7 @@ router.post('/', lineupCtrl.create);
 router.get('/:id', lineupCtrl.show);
 router.get('/:id/edit', lineupCtrl.updateLineup);
 router.put('/:id', lineupCtrl.update);
+router.delete('/:id', lineupCtrl.deleteLineup);
 
 
 module.exports = router;

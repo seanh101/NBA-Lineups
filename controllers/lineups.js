@@ -58,6 +58,16 @@ function update(req, res, next) {
 		.catch(next)
 }
 
+function deleteLineup(req, res, next) {
+    Lineup.findById(req.params.id)
+    .then((lineup) => {
+        if (!lineup.user.equals(req.user._id)) throw new Error('Unauthorized')
+        return lineup.deleteOne()
+    })
+    .then(() => res.redirect('/lineups'))
+    .catch(next)
+}
+
 
 module.exports = {
     index,
@@ -66,5 +76,6 @@ module.exports = {
     update,
     newLineup,
     updateLineup,
+    deleteLineup
     
 }
