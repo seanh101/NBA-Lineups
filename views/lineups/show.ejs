@@ -5,7 +5,7 @@
 </h3>
 
 <ul>
-    <% lineup.player.forEach(function(player) { %>
+    <% lineup.players.forEach(function(player) { %>
         <li>
             <form action="/players/<%= lineup.id %>/<%= player.id %>?_method=DELETE" method="POST">
                 <button type="submit">X</button>

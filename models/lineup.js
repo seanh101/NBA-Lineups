@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 const playerSchema = require('./player')
 
 const lineupSchema = new mongoose.Schema({
@@ -9,11 +9,11 @@ const lineupSchema = new mongoose.Schema({
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'User',
     },
-    player: [playerSchema]
+    players: [playerSchema],
 },{
-    timestamps: true
+    timestamps: true,
 })
 
 module.exports = mongoose.model('Lineup', lineupSchema);
