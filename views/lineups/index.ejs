@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+
+<h2>Starting Lineups</h2>
+
+<a href="/lineups/new">Add a new lineup</a>
+
+<ul>
+    <% lineups.forEach(function(lineup) { %>
+        <li>
+            <form action="/lineups/<%= lineup.id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+            </form>
+            <a href="/lineups/<%= lineup.id %>">
+                <%= lineup.name %>
+            </a>
+        </li>
+        <% }); %>
+</ul>
+
+
+<%- include('../partials/footer') %>

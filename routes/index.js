@@ -13,7 +13,7 @@ router.get(
 )
 
 router.get(
-	'/oauth2callback',
+	'/nba',
 	passport.authenticate('google', {
 		successRedirect: '/',
 		failureRedirect: '/',

@@ -1,0 +1,27 @@
+<%- include('../partials/header.ejs') %>
+
+<h3>
+    <%= lineup.name %>
+</h3>
+
+<ul>
+    <% lineup.player.forEach(function(player) { %>
+        <li>
+            <form action="/players/<%= lineup.id %>/<%= player.id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+            </form>
+            <a href="/players/<%= player.name %>">
+                <%= player.name %>
+            </a>
+        </li>
+        <% }); %>
+</ul>
+
+<form action="/players/<%= lineup.id %>" method="POST">
+    <input type="text" name="name">
+    <button type="submit">Add Player</button>
+</form>
+
+<a href="/lineups/<%= lineup.id %>/edit">Edit</a>
+
+<%- include('../partials/footer.ejs') %>
