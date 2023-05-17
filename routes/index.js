@@ -4,8 +4,16 @@ const passport = require('passport')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-	res.render('index', { title: 'Express' })
+	fetch('https://www.balldontlie.io/api/v1/players?per_page=100')
+		.then((res) => res.json())
+		.then((player) => {
+			res.render('players/index', {
+				player: player.data,
+				title: 'All Players',
+		})
+	})
 })
+
 
 router.get(
 	'/auth/google',

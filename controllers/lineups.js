@@ -18,9 +18,7 @@ function newLineup(req, res) {
 }
 
 function create(req, res, next) {
-    console.log(req.user)
     req.body.user = req.user._id;
-    console.log(req.body)
     Lineup.create(req.body)
       .then(() => res.redirect('/lineups'))
       .catch(next)

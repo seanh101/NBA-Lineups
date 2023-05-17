@@ -1,5 +1,15 @@
 <%- include('../partials/header') %>
 
-
+<h2>Players</h2>
+<div class="players-container">
+    <% player.forEach(function(player) { %>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><%= player.first_name + ' ' + player.last_name %></h5>
+                <a href="/players/<%= player.id %>" class="card-link">Detail Page</a>
+            </div>
+        </div>
+    <% }); %>
+</div>
 
 <%- include('../partials/footer') %>
