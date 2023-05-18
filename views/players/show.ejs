@@ -5,11 +5,11 @@
 
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title"><%= player.first_name + ' ' + player.last_name %></h5>
-                <p class="card-text"><%= player.first_name + ' ' + player.last_name %> is <%= player.position %> type Player</p>
+                <h5><%= player.first_name + ' ' + player.last_name %></h5> 
             </div>
             <ul class="list-group list-group-flush">
                 <li>ID: <%= player.id %></li>
+                <li>Position: <%= player.position %></li>
                 <li>Height: <%= player.height_feet %> feet <%= player.height_inches %> inches</li>
                 <li>Weight: <%= player.weight_pounds %> pounds</li>
                 <li>Team: <%= player.team.full_name %> (Abbreviation: <%= player.team.abbreviation %>)</li>
