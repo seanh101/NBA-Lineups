@@ -45,3 +45,7 @@ h2 {
   .card-link:hover {
     background-color: #555;
   }
+
+  button[type="submit"]:hover {
+    background-color: #ff3f3f;
+  }

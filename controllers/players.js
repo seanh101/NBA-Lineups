@@ -29,7 +29,7 @@ function deletePlayerFromLineup(req, res, next) {
     Lineup.findById(req.params.lineupId)
     .then((lineup) => {
         if (!lineup.user.equals(req.user._id)) throw new Error('Unauthorized')
-        lineup.player.id(req.params.playerId).deleteOne()
+        lineup.players.id(req.params.playerId).deleteOne()
         return lineup.save()
     })
     .then(() => res.redirect(`/lineups/${req.params.lineupId}`))
