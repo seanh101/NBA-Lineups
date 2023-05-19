@@ -1,13 +1,3 @@
-README has the app title and description 
-README has embedded screenshots of your finished app
-README has a list of technologies used
-README has a Getting Started section with any instructions you deem important
-README must include Planned future enhancements
-README has link to a 'public' trello board
-Trello has sections of "iceBox", "current/MVP", and "completed" which hold user stories 
-Trello has ERD and Wireframes 
-
-
 # NBA Player Lineups
 
 An app that allows the user to create many lineups/teams that contain multible nba players within them.
